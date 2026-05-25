@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Cores Principais — Identidade Allcrom */
+    --violet-brand: 232 95% 66%;
+    --blue-corporate: 217 56% 42%;
+    --violet-bright: 231 91% 66%;
+    --navy-dark: 230 30% 15%;
+
+    /* Status */
+    --status-ok: 142 76% 36%;
+    --status-atencao: 45 93% 47%;
+    --status-critico: 0 84% 60%;
+    --status-neutro: 240 10% 50%;
+
+    /* Superfícies */
+    --surface: 240 20% 97%;
+    --surface-container-lowest: 0 0% 100%;
+    --surface-container: 240 15% 95%;
+    --surface-container-high: 240 15% 93%;
+    --on-surface: 230 30% 15%;
+    --outline-variant: 240 10% 80%;
+
+    /* Base */
+    --background: 240 20% 97%;
+    --foreground: 230 30% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 230 30% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 30% 15%;
+    --primary: 232 95% 66%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 217 56% 42%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 240 15% 93%;
+    --muted-foreground: 240 10% 40%;
+    --accent: 240 15% 95%;
+    --accent-foreground: 230 30% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 15% 75%;
+    --input: 240 15% 93%;
+    --ring: 232 95% 66%;
+    --radius: 0.75rem;
+
+    /* Sidebar */
+    --sidebar-background: 240 40% 10%;
+    --sidebar-foreground: 240 10% 90%;
+    --sidebar-primary: 232 95% 66%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 30% 16%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 20% 18%;
+    --sidebar-ring: 232 95% 66%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Hind', system-ui, -apple-system, sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', system-ui, -apple-system, sans-serif;
+  }
+  code, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .modulo-header { @apply flex items-center justify-between flex-col gap-4 sm:flex-row; }
+  .modulo-titulo { @apply text-2xl font-bold tracking-tight; }
+  .modulo-subtitulo { @apply text-muted-foreground; }
+  .touch-target { min-height: 44px; min-width: 44px; }
+  .text-balance { text-wrap: balance; }
+  .scrollbar-thin { scrollbar-width: thin; }
+}
