@@ -40,14 +40,14 @@ export function GraficoTopProdutos() {
                 width={100}
               />
               <Tooltip
-                formatter={(_value: number, _name: string, props: { payload: { descricao: string; quantidade: number; faturamento: number } }) => {
+                formatter={(_value: any, _name: any, props: any) => {
                   const p = props.payload;
                   return [
                     <span key="qty">{`${p.quantidade} un.`}</span>,
                     <span key="fat" className="block text-muted-foreground">{formatarMoeda(p.faturamento)}</span>,
                   ];
                 }}
-                labelFormatter={(label: string) => dados.find(d => d.descricaoCurta === label)?.descricao ?? label}
+                labelFormatter={(label: any) => dados.find(d => d.descricaoCurta === label)?.descricao ?? label}
               />
               <Bar dataKey="quantidade" fill="#566DFB" radius={[0, 4, 4, 0]} />
             </BarChart>

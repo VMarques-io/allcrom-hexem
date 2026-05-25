@@ -123,7 +123,7 @@ export default function FluxoCaixa() {
                   width={80}
                 />
                 <Tooltip
-                  formatter={(value: number, name: string) => [
+                  formatter={(value: any, name: any) => [
                     formatarMoeda(value),
                     name === 'entradas' ? 'Entradas' : 'Saídas',
                   ]}

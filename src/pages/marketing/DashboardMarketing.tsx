@@ -142,7 +142,7 @@ export default function DashboardMarketing() {
                     ))}
                   </Pie>
                   <Tooltip
-                    formatter={(value: number, name: string) => [`${value} leads`, name]}
+                    formatter={(value: any, name: any) => [`${value} leads`, name]}
                   />
                   <Legend
                     verticalAlign="bottom"

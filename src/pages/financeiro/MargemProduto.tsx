@@ -105,7 +105,7 @@ export default function MargemProduto() {
                 <CartesianGrid strokeDasharray="3 3" className="stroke-muted" horizontal={false} />
                 <XAxis type="number" className="text-xs" tick={{ fontSize: 12 }} tickFormatter={formatarMoeda} />
                 <YAxis type="category" dataKey="nome" className="text-xs" tick={{ fontSize: 10 }} width={180} />
-                <Tooltip formatter={(value: number) => [formatarMoeda(value), 'Rentabilidade']} />
+                <Tooltip formatter={(value: any) => [formatarMoeda(value), 'Rentabilidade']} />
                 <Bar dataKey="rentabilidade" fill="url(#colorRentabilidade)" radius={[0, 4, 4, 0]} />
               </BarChart>
             </ResponsiveContainer>

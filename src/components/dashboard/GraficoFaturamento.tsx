@@ -42,7 +42,7 @@ export function GraficoFaturamento() {
                 width={60}
               />
               <Tooltip
-                formatter={(value: number) => [formatarMoeda(value), 'Faturamento']}
+                formatter={(value: any) => [formatarMoeda(value as number), 'Faturamento']}
               />
               <Area
                 type="monotone"

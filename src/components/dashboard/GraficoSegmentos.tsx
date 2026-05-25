@@ -18,13 +18,8 @@ const CORES: Record<string, string> = {
   'Outros': '#6B7280',
 };
 
-interface PayloadEntry {
-  name: string;
-  value: number;
-  percent: number;
-}
-
-function renderCustomLabel({ name, percent }: PayloadEntry) {
+function renderCustomLabel(props: any) {
+  const { name, percent } = props;
   return `${name} ${(percent * 100).toFixed(0)}%`;
 }
 
@@ -54,7 +49,7 @@ export function GraficoSegmentos() {
                 ))}
               </Pie>
               <Tooltip
-                formatter={(value: number, name: string) => [`${value}%`, name]}
+                formatter={(value: any, name: any) => [`${value}%`, name]}
               />
               <Legend
                 verticalAlign="bottom"

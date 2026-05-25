@@ -42,7 +42,7 @@ export function GraficoStatusOS() {
                 ))}
               </Pie>
               <Tooltip
-                formatter={(value: number, name: string) => [`${value} OS`, name]}
+                formatter={(value: any, name: any) => [`${value} OS`, name]}
               />
             </PieChart>
           </ResponsiveContainer>
