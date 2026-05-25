@@ -53,7 +53,7 @@ export default function Login() {
         {/* Grid pattern overlay */}
         <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
         
-        <div className="relative z-10 flex flex-col justify-center px-16">
+        <div className="relative z-10 flex flex-col justify-center h-full px-16 py-12">
           {/* Logo */}
           <div className="mb-12">
             <div className="flex items-center gap-4">
@@ -62,7 +62,7 @@ export default function Login() {
           </div>
 
           {/* Tagline */}
-          <div className="mb-12">
+          <div className="mb-10">
             <h2 className="text-4xl font-bold text-white leading-tight mb-4">
               Sistema Operacional<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-purple-400">
@@ -75,7 +75,7 @@ export default function Login() {
           </div>
 
           {/* Features */}
-          <div className="space-y-4">
+          <div className="space-y-5">
             {features.map((feature, i) => (
               <motion.div
                 key={feature}
@@ -84,16 +84,16 @@ export default function Login() {
                 transition={{ delay: 0.3 + i * 0.1 }}
                 className="flex items-center gap-3"
               >
-                <div className="h-8 w-8 rounded-lg bg-violet-500/20 flex items-center justify-center">
-                  <CheckCircle2 className="h-4 w-4 text-violet-400" />
+                <div className="h-9 w-9 rounded-lg bg-violet-500/20 flex items-center justify-center shrink-0">
+                  <CheckCircle2 className="h-5 w-5 text-violet-400" />
                 </div>
-                <span className="text-slate-300">{feature}</span>
+                <span className="text-slate-300 text-base">{feature}</span>
               </motion.div>
             ))}
           </div>
 
           {/* Footer */}
-          <div className="mt-auto pt-12 flex items-center gap-2 text-slate-500">
+          <div className="mt-auto pt-10 flex items-center gap-2 text-slate-500">
             <Shield className="h-4 w-4" />
             <span className="text-sm">ISO 9001:2015 Certificado</span>
           </div>
